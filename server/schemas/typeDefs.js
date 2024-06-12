@@ -11,7 +11,7 @@ const typeDefs = `
 
   type Flashcard {
     _id: ID
-    question: Sring
+    question: String
     answer: Int
   }
 

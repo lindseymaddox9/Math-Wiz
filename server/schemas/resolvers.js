@@ -1,25 +1,58 @@
-const { User } = require('../models');
+const { User, Score } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
     users: async () => {
+      try{
       return User.find();
+    }catch(error){
+      throw new Error (error.message)
+    }
     },
+
     user: async (parent, { username }) => {
+      try{
       return User.findOne({ username });
+      }catch(error){
+        throw new Error (error.message)
+      }
     },
+
     getFlashcards: async ()=>{
+      try{
       return Flashcard.find();
+    }catch(error){
+      throw new Error (error.message)
+    }
+    },
+
+    //fetch scores from db based on provided userId
+    getScore: async (parent,{userId})=>{
+      try{
+      if (userId){//find method to search for scores in the score collection of db where user field matches userId
+        return Score.find({user: userId}).populate('user');
+      }else{
+        return Score.find().populate('user');
+      }
+    }catch(error){
+      throw new Error (error.message)
+    }
     }
   },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
+      try{
       const user = await User.create({ username, email, password });
       const token = signToken(user);
       return { token, user };
+    } catch(error){
+      throw new Error (error.message);
+    }
+
     },
     login: async (parent, { email, password }) => {
+      try{
       const user = await User.findOne({ email });
 
       if (!user) {
@@ -35,17 +68,10 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    },
-    addScore: async (parent, { thoughtText, thoughtAuthor }) => {
-      const thought = await Thought.create({ thoughtText, thoughtAuthor });
+    } catch(error){
+      throw new Error (error.message);
+    }
 
-      await User.findOneAndUpdate(
-        { username: thoughtAuthor },
-        { $addToSet: { thoughts: thought._id } }
-      );
-
-      return thought;
-    },   
     },
   },
 };
