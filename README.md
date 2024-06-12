@@ -16,6 +16,8 @@ MERN-stack single-page application, you’ll combine a scalable MongoDB back end
 
 Css styling includes…………
 Technologies Used: HTML5, React, GraphQL, Node.js, Express.js, MongoDB and Mongoose ODM, JWT and ............
+
+
 Usage:
 
 User story:
@@ -39,7 +41,7 @@ Credits: This is a collobaration between Jewel Sunny, Samantha Shuttleworth, Lin
 
 Repo links
 Jewel Sunny: https://github.com/jewelsunny1
-Samantha Shutttleworth:
+Samantha Shutttleworth:https://github.com/Sashuttle
 Lindsey Maddox: https://github.com/lindseymaddox9
  
 License: MIT
