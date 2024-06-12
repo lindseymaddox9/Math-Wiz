@@ -9,6 +9,9 @@ const resolvers = {
     user: async (parent, { username }) => {
       return User.findOne({ username });
     },
+    getFlashcards: async ()=>{
+      return Flashcard.find();
+    }
   },
   Mutation: {
     addUser: async (parent, { username, email, password }) => {
