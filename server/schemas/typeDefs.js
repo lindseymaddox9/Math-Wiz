@@ -1,4 +1,5 @@
 //FixMe: Do we need Getflashcards(are we doing it on the fly or predefined) & get score for query [lines 31&32 type query]
+//ASK:about line 33 type query (scores)
 const typeDefs = `
   type User {
     _id: ID
@@ -10,7 +11,7 @@ const typeDefs = `
 
   type Flashcard {
     _id: ID
-    question: Sring
+    question: String
     answer: Int
   }
 
@@ -29,7 +30,7 @@ const typeDefs = `
     users: [User]
     user(username: String!): User  
     getFlashcards: [Flashcard]
-    getScore(highScore: Int): [Score] 
+    getScore(userId:ID!): [Score] #TODO: Add highscore @ end
   }
 
   type Mutation {
