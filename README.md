@@ -1,7 +1,7 @@
-<!-- # Math-Wiz  Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application). -->
+# Math-Wiz <!-- # Math-Wiz  Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application). -->
 Interactive MERN Stack Single-Page Application that allows children to practice multiplication flashcards 
 
-Description
+## Description
 
 MERN-stack single-page application, you’ll combine a scalable MongoDB back end, a GraphQL API, and an Express.js and Node.js server with a React front end, implementing user authentication with JWT to build a user-focused platform. You’ll continue to build on the agile development methodologies you’ve used throughout this course. These include storing your project code in GitHub, managing your work with a project management tool, and implementing feature and bug fixes using the Git branch workflow and pull requests.
 •	Used React for the front end.
@@ -18,9 +18,9 @@ Css styling includes…………
 Technologies Used: HTML5, React, GraphQL, Node.js, Express.js, MongoDB and Mongoose ODM, JWT and ............
 
 
-Usage:
+## Usage:
 
-User story:
+## User story:
 AS a person who wants to practice their multiplication tables
 I WANT a multiplication flashcards website
 SO THAT I can improve my math skills and quickly recall multiplication tables .
@@ -37,14 +37,15 @@ WHEN I get the answer wrong
 THEN I am taken to the the next question
 
 
-Credits: This is a collobaration between Jewel Sunny, Samantha Shuttleworth, Lindsey Maddox, and our professor Rachel.and repo here 
+## Credits: 
+This is a collobaration between Jewel Sunny, Samantha Shuttleworth, Lindsey Maddox, and our professor Rachel.and repo here 
 
-Repo links
+## Repo links
 Jewel Sunny: https://github.com/jewelsunny1
 Samantha Shutttleworth:https://github.com/Sashuttle
 Lindsey Maddox: https://github.com/lindseymaddox9
  
-License: MIT
+## License: MIT
 Please refer to license in repo.
 
 
