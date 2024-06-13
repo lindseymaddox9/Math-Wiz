@@ -1,6 +1,15 @@
 const { User, Score } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
+//code to create random multiplication problems between 0 and 12
+const randomMath = () => {
+  const num1 = Math.floor(Math.random() * 13);
+  const num2 = Math.floor(Math.random() * 13);
+  const question = `${num1} x ${num2}`;
+  const answer = num1 * num2;
+  return { question, answer };
+};
+
 const resolvers = {
   Query: {
     users: async () => {
@@ -18,10 +27,14 @@ const resolvers = {
         throw new Error (error.message)
       }
     },
-
+    //generate flashcards with random multiplication problem
     getFlashcards: async ()=>{
-      try{
-      return Flashcard.find();
+      try {
+        const flashcards = [];
+        for (let i = 0; i < 10; i++) {
+          flashcards.push(randomMath());
+        }
+      return flashcards;
     }catch(error){
       throw new Error (error.message)
     }
@@ -40,7 +53,10 @@ const resolvers = {
     }
     }
   },
+
+  //MUTATIONS
   Mutation: {
+
     addUser: async (parent, { username, email, password }) => {
       try{
       const user = await User.create({ username, email, password });
@@ -49,8 +65,8 @@ const resolvers = {
     } catch(error){
       throw new Error (error.message);
     }
-
     },
+
     login: async (parent, { email, password }) => {
       try{
       const user = await User.findOne({ email });
@@ -71,8 +87,30 @@ const resolvers = {
     } catch(error){
       throw new Error (error.message);
     }
-
     },
+
+    submitAnswer: async (parent, { userId, question, userAnswer }) => {
+      try {
+        const [num1, num2] = question.split(' x ').map(Number);
+        const correctAnswer = num1 * num2;
+
+        let points = 0;
+        if(correctAnswer === userAnswer) {
+          points = 10;
+        }
+
+        const userScore = await Score.findOne({ user: userId});
+        if (userScore) {
+          userScore.score += points;
+          await userScore.save();
+        } else {
+          await Score.create({ user:userId, socre: points});
+        }
+        return points;
+      } catch (error) {
+        throw new Error(error.message);
+      }
+    }
   },
 };
 
