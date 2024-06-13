@@ -1,0 +1,21 @@
+[
+ {
+  "user":{
+    "username":"user1",
+    "email":"user1@email.com",
+    "password":"password1",
+    "flashcards":[
+      {"question": "2x2",
+       "answer":4
+      }
+    ],
+    "scores":[
+      {"score":80}
+    ]
+    
+ }
+ 
+ 
+}
+
+]
