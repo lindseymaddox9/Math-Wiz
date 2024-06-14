@@ -28,6 +28,7 @@ const resolvers = {
       }
     },
     //generate flashcards with random multiplication problem
+    //FIXME: this currently generates 10 questions at one time, need to fix to display only 1
     getFlashcards: async ()=>{
       try {
         const flashcards = [];
@@ -104,7 +105,7 @@ const resolvers = {
           userScore.score += points;
           await userScore.save();
         } else {
-          await Score.create({ user:userId, socre: points});
+          await Score.create({ user:userId, score: points});
         }
         return points;
       } catch (error) {
