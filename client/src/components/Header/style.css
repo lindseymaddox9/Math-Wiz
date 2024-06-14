@@ -1,4 +1,18 @@
-.banner{
-    background-image: url(../../assets/images/math-wizbanner.png);
+.image-size{
+    /* background-image: url(../../assets/images/mathwizard.png);
     background-size:cover ;
+     */
+background-color:rgb(130, 197, 180);
+
 }
+div.container{
+    background-color: rgb(23, 14, 1);
+}
+
+ 
+/* Tower roof color: r 7 g 69 b 95
+Sky color: r 36 g 154 b 168
+Shadow color in sky: r 29 g 130 b 144
+Brown from hats: r 91 g 55 b 37
+Moon color: r130 g197 b180
+Number colors: r250 g201 b91  */

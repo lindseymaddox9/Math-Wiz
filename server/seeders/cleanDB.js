@@ -1,4 +1,4 @@
-const models = require('../folow models user models pretty boiler');
+const models = require('../models');
 const db = require('../config/connection');
 
 module.exports = async (modelName, collectionName) => {
