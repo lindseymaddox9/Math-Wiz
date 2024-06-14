@@ -1,41 +1,30 @@
 import React from "react"
-import ReactCardFlip from 'react-card-flip';
-import FlashCard from "../components/Card/index.jsx";
+
 class Home extends React.Component {
-  constructor(){
-    super();
-      this.state = {
-      isFlipped: false
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick(e) {
-    e.preventDefault();
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-  }
-
-
-
-
-
+ 
 render(){
-   return (//Math.floor(Math.random()*questionArray.length)
-    // map questions into front carf and answers in to back card
-    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical"containerClassName="flipCard">
-        <FlashCard >
-          What is 60 x 60
-          <button onClick={this.handleClick}>Click to flip</button>
-        </FlashCard>
-
-        <FlashCard>
-          3600
-          <button onClick={this.handleClick}>Click to flip</button>
-        </FlashCard>
-      </ReactCardFlip>
-  );
-}
-    
+   return(
+    <main className="flex-row justify-center mb-4"> 
+    <div className="col-12 col-lg-10">
+      <div className="card">
+        <h4 className="card-header bg-dark text-light p-2">Multiplication FlashcardsGame</h4>
+        <div className="card-body">
+          <p>
+            Welcome to our multiplication flashcards game! This game 
+            is designed to help students learn and master their multiplication tables.
+            Practcce with randomly generated multiplication questions and flip the cards to reveal the 
+            answers. Have fun learning 😊!
+          </p>
+          <p>
+            To start playing, navigate to <strong>Flashcards</strong> section after 
+            signing up or loggin in.
+          </p>
+        </div>
+      </div>
+    </div>
+    </main>
+   )
+}  
 }
 
 
