@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import ErrorPage from './pages/ErrorPage';
+import FlashcardPage from './pages/FlashcardPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,10 @@ const router = createBrowserRouter([
       }, {
         path: '/signup',
         element: <Signup />
-      }, 
+      }, {
+        path:'/flashcards',
+        element: <FlashcardPage/>
+      }
     ]
   },
 ]);

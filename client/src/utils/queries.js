@@ -1,12 +1,17 @@
 import { gql } from '@apollo/client';
 
-export const GET_FLASHCARDS = gql`
-query GetFlashcards{
-getFlashcards{
-_id
-question
-answer
- }
-}
-
+export const QUERY_USER = gql`
+  query user($username: String!) {
+    user(username: $username) {
+      _id
+      username
+      email
+      thoughts {
+        _id
+        thoughtText
+        createdAt
+      }
+    }
+  }
 `;
+
