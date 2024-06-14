@@ -19,6 +19,7 @@ class FlashcardPage extends React.Component {
       userAnswer: "",
       correctAnswer: null,
       timeLeft: 15,
+      score:0
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
