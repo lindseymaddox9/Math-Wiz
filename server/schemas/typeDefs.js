@@ -21,6 +21,16 @@ const typeDefs = `
     score: Int
   }
 
+  type Multiplication {
+    num1: Int!
+    num2: Int!
+}
+
+  type SubmitAnswerResponse {
+    correct: Boolean!
+    score: Score
+  }
+
   type Auth {
     token: ID!
     user: User
@@ -36,6 +46,8 @@ const typeDefs = `
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    randomMath(userId: ID!): Multiplication
+    submitAnswer(userId: ID!, num1: Int!, num2: Int!, answer: Int!): SubmitAnswerResponse
   }
 `;
 
