@@ -17,14 +17,15 @@ render(){
           </p>
           <p>
             To start playing, navigate to <strong>Flashcards</strong> section after 
-            signing up or loggin in.
+            signing up or loggin in
           </p>
         </div>
       </div>
     </div>
     </main>
    )
-}  
+}
+    
 }
 
 

@@ -19,7 +19,7 @@ class FlashcardPage extends React.Component {
       userAnswer: "",
       correctAnswer: null,
       timeLeft: 15,
-      score:0
+      score:0 //intialize score state
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -62,8 +62,21 @@ class FlashcardPage extends React.Component {
     if (e) e.preventDefault();
     const { problem, userAnswer } = this.state;
     const correctAnswer = parseInt(userAnswer) === problem.answer;
-    this.setState({ correctAnswer, isFlipped: true });
-    clearInterval(this.timer);
+
+    if(correctAnswer){
+        this.setState((prevState)=>({
+            correctAnswer: true,
+            isFlipped: true,
+            score: prevState.score +1,
+        }));
+    }else{
+        this.setState({
+            correctAnswer:false,
+            isFlipped:true,
+        });
+    }
+    clearInterval(this.timer)
+
   }
 
   nextProblem() {
@@ -83,6 +96,7 @@ class FlashcardPage extends React.Component {
     return (
       <div>
         <h2>Flashcard Game</h2>
+        <p>Score:{this.state.score}</p>
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" containerClassName="flipCard">
           <FlashCard key="front">
             <div>
