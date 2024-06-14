@@ -1,6 +1,7 @@
 .card {
-    border: 1px solid #7,69,95;
+    border: 1px solid rgb(7,69,95);
     margin-bottom: 1rem;
+    
   }
 .flash-card{
   font-size: 3em;
@@ -11,7 +12,7 @@
   flex-direction: column;
   text-align: center;
   gap: 1em;
-  opacity: 0.6;
+  opacity: 0.7;
   background-color: rgb(7,69,95);
     /* background-image: url("../../assets/images/gold_wizard_hat_720.png");
     background-size: cover; */
@@ -52,3 +53,12 @@
     width: 100%;
     z-index: 2;
   }
+.card-body{
+    background-color: rgba( 7,69,95,.3);
+    margin-top: 0;
+    backdrop-filter: blur(10px);
+  }
+.card-header{
+  font-size: xx-large;
+  margin-bottom: 0rem;
+}
