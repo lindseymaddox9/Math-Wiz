@@ -28,11 +28,10 @@ const resolvers = {
       }
     },
     //generate flashcards with random multiplication problem
-    //FIXME: this currently generates 10 questions at one time, need to fix to display only 1
     getFlashcards: async ()=>{
       try {
         const flashcards = [];
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 1; i++) {
           flashcards.push(randomMath());
         }
       return flashcards;

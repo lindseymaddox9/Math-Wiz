@@ -1,45 +1,116 @@
-import React from "react"
-import ReactCardFlip from 'react-card-flip';
+import React from "react";
+import ReactCardFlip from "react-card-flip";
 import FlashCard from "../components/Card/index.jsx";
+
+const randomMath = () => {
+  const num1 = Math.floor(Math.random() * 13);
+  const num2 = Math.floor(Math.random() * 13);
+  const question = `${num1} x ${num2}`;
+  const answer = num1 * num2;
+  return { question, answer };
+};
+
 class FlashcardPage extends React.Component {
-  constructor(){
+  constructor() {
     super();
-      this.state = {
-      isFlipped: false
+    this.state = {
+      isFlipped: false,
+      problem: randomMath(),
+      userAnswer: "",
+      correctAnswer: null,
+      timeLeft: 15,
     };
     this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.nextProblem = this.nextProblem.bind(this);
+    this.timer = null;
+  }
+
+  componentDidMount() {
+    this.startTimer();
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timer);
+  }
+
+  startTimer() {
+    this.timer = setInterval(() => {
+      this.setState((prevState) => {
+        if (prevState.timeLeft <= 1) {
+          clearInterval(this.timer);
+          this.handleSubmit();
+          return { timeLeft: 0 };
+        }
+        return { timeLeft: prevState.timeLeft - 1 };
+      });
+    }, 1000);
   }
 
   handleClick(e) {
     e.preventDefault();
-    this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    this.setState((prevState) => ({ isFlipped: !prevState.isFlipped }));
   }
 
+  handleChange(e) {
+    this.setState({ userAnswer: e.target.value });
+  }
 
+  handleSubmit(e) {
+    if (e) e.preventDefault();
+    const { problem, userAnswer } = this.state;
+    const correctAnswer = parseInt(userAnswer) === problem.answer;
+    this.setState({ correctAnswer, isFlipped: true });
+    clearInterval(this.timer);
+  }
 
+  nextProblem() {
+    this.setState({
+      isFlipped: false,
+      problem: randomMath(),
+      userAnswer: "",
+      correctAnswer: null,
+      timeLeft: 15,
+    });
+    this.startTimer();
+  }
 
+  render() {
+    const { problem, isFlipped, correctAnswer, timeLeft } = this.state;
 
-render(){
-   return (//Math.floor(Math.random()*questionArray.length)
-    // map questions into front carf and answers in to back card
-    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical"containerClassName="flipCard">
-        <FlashCard >
-          What is 60 x 60
-          <button onClick={this.handleClick}>Click to flip</button>
-        </FlashCard>
+    return (
+      <div>
+        <h2>Flashcard Game</h2>
+        <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" containerClassName="flipCard">
+          <FlashCard key="front">
+            <div>
+              <p>{problem.question}</p>
+              <form onSubmit={this.handleSubmit}>
+                <input
+                  type="number"
+                  value={this.state.userAnswer}
+                  onChange={this.handleChange}
+                />
+                <button type="submit">Submit</button>
+              </form>
+              <p>Time left: {timeLeft} seconds</p>
+            </div>
+          </FlashCard>
 
-        <FlashCard>
-          3600
-          <button onClick={this.handleClick}>Click to flip</button>
-        </FlashCard>
-      </ReactCardFlip>
-  );
+          <FlashCard key="back">
+            <div>
+              {correctAnswer !== null && (
+                <p>{correctAnswer ? "Correct!" : `Incorrect! The correct answer is ${problem.answer}`}</p>
+              )}
+              <button onClick={this.nextProblem}>Next Problem</button>
+            </div>
+          </FlashCard>
+        </ReactCardFlip>
+      </div>
+    );
+  }
 }
-    
-}
-
-
- 
-
 
 export default FlashcardPage;
+
