@@ -1,15 +1,21 @@
 .image-size{
-    /* background-image: url(../../assets/images/mathwizard.png);
-    background-size:cover ;
-     */
+    
 background-color:rgb(130, 197, 180);
 
 }
 div.container{
-    background-color: rgb(23, 14, 1);
+    /* background-color: rgb(23, 14, 1); */
 }
 
- 
+p{
+    font-size: 40px;
+} 
+
+h1{
+    font-size: 60px;
+    text-decoration: none;
+
+}
 /* Tower roof color: r 7 g 69 b 95
 Sky color: r 36 g 154 b 168
 Shadow color in sky: r 29 g 130 b 144
