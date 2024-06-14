@@ -1,7 +1,9 @@
 .image-size{
-    background-image: url(../../assets/images/mathwizard.png);
+    /* background-image: url(../../assets/images/mathwizard.png);
     background-size:cover ;
-    
+     */
+background-color:rgb(130, 197, 180);
+
 }
 div.container{
     background-color: rgb(23, 14, 1);

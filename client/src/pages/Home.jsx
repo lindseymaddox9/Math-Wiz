@@ -22,7 +22,7 @@ class Home extends React.Component {
 render(){
    return (//Math.floor(Math.random()*questionArray.length)
     // map questions into front carf and answers in to back card
-    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical">
+    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="vertical"containerClassName="flipCard">
         <FlashCard >
           What is 60 x 60
           <button onClick={this.handleClick}>Click to flip</button>
