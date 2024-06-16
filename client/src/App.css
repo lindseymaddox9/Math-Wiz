@@ -1732,6 +1732,7 @@ label form [type='radio'] {
   text-align: center;
   font-size: 45px;
   background-color: rgb(7, 69, 95);
+  opacity: .8;
 }
 
 .gameIntro {
