@@ -59,6 +59,8 @@ GraphQl - GraphQL is a query language for APIs and a runtime for fulfilling thos
 
 JWT - JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties. https://jwt.io/
 
+Render - Build, deploy, and scale your apps with unparalleled ease – from your first user to your billionth. https://render.com/
+
 ## Acknowledgements:
 The three of us would like to acknowledge our instructor Rachel and teaching assistant Mark, for all the support we received from the two of them throughout this project. Both continued to answer any questions we had and with their guidance we were able to create a very fun web game.  We are also thankful to be able to use tools such as our class ai chat bot, Xpert learning assistant, as well as, our class lessons.  We were able to use both resources to help us build this application.  Outside resources like chatgpt and code documentation were also valuable in helping us with this project.  Finally, we would like to thank each other. The three of us worked phenominaly as a team and it was such a fun final project for our full stack bootcamp. We helped each other throughout the whole process and had so much fun designing and coding this game. 
 
@@ -71,7 +73,16 @@ Samantha Shutttleworth:https://github.com/Sashuttle
 Lindsey Maddox: https://github.com/lindseymaddox9
 
 ## Live URL Link
-
+https://math-wiz.onrender.com/
  
 ## License: MIT
 Please refer to license in repo.
+
+## Screenshots
+![HomePage](/client/src/assets/images/screenshots/Home.png)
+
+![Login](/client/src/assets/images/screenshots/login.png)
+
+![SignUp](/client/src/assets/images/screenshots/signup.png)
+
+![Game](/client/src/assets/images/screenshots/game.png)
