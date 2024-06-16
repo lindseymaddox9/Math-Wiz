@@ -10,7 +10,7 @@ a.btn./*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
- html {
+html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -1722,4 +1722,12 @@ label form [type='radio'] {
   .align-content-center-xl {
     align-content: center;
   }
+}
+
+/* NOTE: Adjust score design */
+.score {
+color: white;
+text-align: center;
+font-size: 45px;
+background-color: rgb(7, 69, 95);
 }

@@ -95,8 +95,7 @@ class FlashcardPage extends React.Component {
 
     return (
       <div>
-        <h2>Flashcard Game</h2>
-        <p>Score:{this.state.score}</p>
+        <h2 class="score">Score:{this.state.score}</h2>
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" containerClassName="flipCard">
           <FlashCard key="front">
             <div>
