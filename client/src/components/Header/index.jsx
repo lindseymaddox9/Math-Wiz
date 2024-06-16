@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import hat from '../../assets/images/gold_wizard_hat_720.png';
 
 import Auth from '../../utils/auth';
 import "./style.css"
@@ -12,14 +13,15 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0">Math-Wiz</h1>
+            <h1 className="m-0"><img src={hat} alt="gold wizard hat" class="hat"></img>
+              Math-Wiz
+              </h1>
           </Link>
-          <p className="m-0">Multiplication Flashcards.</p>
         </div>
         <div>
           {Auth.loggedIn() ? (
             <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
+              <span class="name">Hey there, {Auth.getProfile().data.username}!</span>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
