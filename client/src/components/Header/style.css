@@ -3,9 +3,9 @@
 background-color:rgb(130, 197, 180);
 
 }
-div.container{
+/*div.container{
     
-}
+}*/
 
 p{
     font-size: 40px;
@@ -20,8 +20,11 @@ h1{
 }
 
 .hat {
-    width: 60px;
+    width: 70px;
     height: auto;
+}
+.wand {
+    width: 80px;
 }
 /* Tower roof color: r 7 g 69 b 95
 Sky color: r 36 g 154 b 168

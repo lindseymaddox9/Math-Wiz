@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
 import hat from '../../assets/images/gold_wizard_hat_720.png';
-
+import wand from '../../assets/images/wand4.png';
 import Auth from '../../utils/auth';
 import "./style.css"
+
+
 const Header = () => {
   const logout = (event) => {
     event.preventDefault();
@@ -15,6 +17,7 @@ const Header = () => {
           <Link className="text-light" to="/">
             <h1 className="m-0"><img src={hat} alt="gold wizard hat" class="hat"></img>
               Math-Wiz
+              <img src={wand} alt="math wand" class="wand"></img>
               </h1>
           </Link>
         </div>
