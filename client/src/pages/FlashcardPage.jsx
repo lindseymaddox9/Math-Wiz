@@ -99,8 +99,8 @@ class FlashcardPage extends React.Component {
         <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical" containerClassName="flipCard">
           <FlashCard key="front">
             <div>
-              <p>{problem.question}</p>
-              <form onSubmit={this.handleSubmit}>
+              <p class="problem">{problem.question}</p>
+              <form class="form" onSubmit={this.handleSubmit}>
                 <input
                   type="number"
                   value={this.state.userAnswer}
@@ -108,16 +108,16 @@ class FlashcardPage extends React.Component {
                 />
                 <button type="submit">Submit</button>
               </form>
-              <p>Time left: {timeLeft} seconds</p>
+              <p class ="timer">Time left: {timeLeft} seconds</p>
             </div>
           </FlashCard>
 
           <FlashCard key="back">
             <div>
               {correctAnswer !== null && (
-                <p>{correctAnswer ? "Correct!" : `Incorrect! The correct answer is ${problem.answer}`}</p>
+                <p class="problem">{correctAnswer ? "Correct!" : `Incorrect! The correct answer is ${problem.answer}`}</p>
               )}
-              <button onClick={this.nextProblem}>Next Problem</button>
+              <button class="form" onClick={this.nextProblem}>Next Problem</button>
             </div>
           </FlashCard>
         </ReactCardFlip>
