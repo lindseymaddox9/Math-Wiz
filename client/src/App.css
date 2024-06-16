@@ -521,6 +521,7 @@ a:hover {
 
 .mb-4 {
   margin-bottom: 1.375rem !important;
+  
 }
 
 .mb-5 {
@@ -863,8 +864,8 @@ a:hover {
 }
 
 .py-3 {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  /*padding-top: 1rem !important;
+  padding-bottom: 1rem !important;*/
 }
 
 .py-4 {
@@ -1730,4 +1731,9 @@ color: white;
 text-align: center;
 font-size: 45px;
 background-color: rgb(7, 69, 95);
+}
+
+.gameIntro {
+  font-size: 30px;
+  
 }

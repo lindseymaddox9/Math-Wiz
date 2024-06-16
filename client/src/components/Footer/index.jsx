@@ -1,8 +1,10 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import "./style.css"
+
 const Footer = () => {
   const location = useLocation();
   const navigate = useNavigate();
+
   return (
     <footer className="w-100 bg-secondary p-4 footer">
       <div className="container text-center mb-5">
@@ -26,7 +28,9 @@ const Footer = () => {
           </span>{' '}
           by Jewel Sam and Lindsey.
         </h4>
+        
       </div>
+      
     </footer>
   );
 };

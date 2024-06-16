@@ -1,5 +1,21 @@
 # Math-Wiz 
-Interactive MERN Stack Single-Page Application that allows children to practice multiplication flashcards.  They will practice times tables from 0 to 12 and become the ultimate Math Wizards!
+Interactive MERN Stack Single-Page Application that allows children to practice multiplication flashcards.  They will practice times tables from 0 to 12 and become the ultimate Math Wizard!
+
+## User story:
+AS a person who wants to practice their multiplication tables
+I WANT a multiplication flashcards website
+SO THAT I can improve my math skills and quickly recall multiplication tables .
+GIVEN a multiplication flashcards website
+WHEN I visit the login page
+THEN I am prompted to enter my login details.
+WHEN I dont have an account
+THEN I will be redirected to the sign up page.
+WHEN I am logged in to my account
+THEN I can view the homepage, which includes a flashcard with a randomly generated multiplication table practice question (multiple between 1-12), and a scorekeeper based on how many questions the user gets correct.
+WHEN I get the answer correct
+THEN I earn a point or move to the next question.
+WHEN I get the answer wrong
+THEN I am taken to the the next question
 
 ## Description
 
@@ -13,8 +29,6 @@ MERN-stack single-page application, you’ll combine a scalable MongoDB back end
 •	Interactive
 •	Authentication (JWT).
 •	Protected sensitive API key information on the server.
-
-Css styling includes…………
 
 
 ## Technologies & Resources Used: 
@@ -45,33 +59,19 @@ GraphQl - GraphQL is a query language for APIs and a runtime for fulfilling thos
 
 JWT - JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties. https://jwt.io/
 
-## Usage:
+## Acknowledgements:
+The three of us would like to acknowledge our instructor Rachel and teaching assistant Mark, for all the support we received from the two of them throughout this project. Both continued to answer any questions we had and with their guidance we were able to create a very fun web game.  We are also thankful to be able to use tools such as our class ai chat bot, Xpert learning assistant, as well as, our class lessons.  We were able to use both resources to help us build this application.  Outside resources like chatgpt and code documentation were also valuable in helping us with this project.  Finally, we would like to thank each other. The three of us worked phenominaly as a team and it was such a fun final project for our full stack bootcamp. We helped each other throughout the whole process and had so much fun designing and coding this game. 
 
-## User story:
-AS a person who wants to practice their multiplication tables
-I WANT a multiplication flashcards website
-SO THAT I can improve my math skills and quickly recall multiplication tables .
-GIVEN a multiplication flashcards website
-WHEN I visit the login page
-THEN I am prompted to enter my login details.
-WHEN I dont have an account
-THEN I will be redirected to the sign up page.
-WHEN I am logged in to my account
-THEN I can view the homepage, which includes a flashcard with a randomly generated multiplication table practice question (multiple between 1-12), and a scorekeeper based on how many questions the user gets correct.
-WHEN I get the answer correct
-THEN I earn a point or move to the next question.
-WHEN I get the answer wrong
-THEN I am taken to the the next question
-
-## Credits: 
-This is a collobaration between Jewel Sunny, Samantha Shuttleworth, Lindsey Maddox, and our professor Rachel.
+## Collaboration: 
+Math-Wiz was created and coded by Jewel Sunny, Lindsey Maddox, and Samantha Shuttleworth.
 
 ## Repo links
 Jewel Sunny: https://github.com/jewelsunny1
 Samantha Shutttleworth:https://github.com/Sashuttle
 Lindsey Maddox: https://github.com/lindseymaddox9
+
+## Live URL Link
+
  
 ## License: MIT
 Please refer to license in repo.
-
-
